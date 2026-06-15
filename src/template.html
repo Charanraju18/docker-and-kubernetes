@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker & Kubernetes: Zero to Production</title>
+    <meta name="description" content="A complete interactive learning portal for Docker and Kubernetes.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* INJECT_CSS */
+    </style>
+</head>
+<body class="dark-mode"> <!-- Default to dark mode for premium feel -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <div class="layout">
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h2>☁️ CloudNative<br>Mastery</h2>
+                <div class="controls">
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search topics, commands...">
+                <div id="search-results" class="search-results hidden"></div>
+            </div>
+
+            <div class="learning-paths">
+                <select id="path-selector">
+                    <option value="all">Full Course (All Sections)</option>
+                    <option value="docker">Docker Path (1-12)</option>
+                    <option value="k8s">Kubernetes Path (13-22)</option>
+                    <option value="prod">Production Path (23-29)</option>
+                </select>
+            </div>
+
+            <nav id="nav-links">
+                <!-- INJECT_NAV -->
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="progress-stats">
+                    <span id="progress-text">0% Complete</span>
+                    <button id="reset-progress">Reset</button>
+                </div>
+            </div>
+        </aside>
+
+        <main id="main-content" class="main-content">
+            <!-- Content gets injected here or shown via JS -->
+            <div id="content-container">
+                <!-- INJECT_CONTENT -->
+            </div>
+            
+            <div class="section-navigation">
+                <button id="prev-btn" class="nav-btn" disabled>← Previous</button>
+                <button id="next-btn" class="nav-btn">Next →</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="glossary-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Glossary</h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Scripts Data -->
+    <script>
+        // INJECT_DATA
+    </script>
+    <script>
+        // INJECT_JS
+    </script>
+</body>
+</html>
